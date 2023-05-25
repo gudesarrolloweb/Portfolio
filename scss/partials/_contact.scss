@@ -1,0 +1,27 @@
+.grid {
+    .maincontact {
+        display: grid;
+        grid-area: main1;
+        margin-top: 32%;
+        max-width: 40vw;
+        margin-bottom: 2vw;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+
+        .titlecontact {
+            color: $black;
+            margin: 0.3vw;
+            font-size: 8vw;
+        }
+
+        .subtitlecontact {
+            font-size: 1.37vw;
+            color: $black;
+            margin: 0.8vw;
+            .email {
+                color: black;
+            }
+        }
+    }
+}

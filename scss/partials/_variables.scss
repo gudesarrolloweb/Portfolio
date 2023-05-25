@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300;0,5..1200,400;0,5..1200,500;0,5..1200,600;1,5..1200,300;1,5..1200,400;1,5..1200,500;1,5..1200,600&display=swap');
+
+$fontPlayfair: 'Playfair', serif;
+
+$black: #000000de;
+$gray: #f3f5e2;
+$darkgray: #a9a9a9;
+$lightblack: #444444;
+$white: #ffffff;
+
+
+:root {
+    --clr-bg: #f3f5e2;
+    --clr-details: #ffffff;
+    --clr-bg-90: #f3eeeebb;
+    --clr-text: #000000de;
+    --clr-gray: rgba(251, 255, 0, 0.938);
+    --clr-gray-alt: #cecbf0;
+    --clr-botton: #504e99f3;
+}
+
+/* VARIABLES DARK */
+[data-theme="dark"] {
+    --clr-bg: #d84a4aaf;
+    --clr-bg-90: #1a1a17e6;
+    --clr-text: #a7caff;
+    --clr-gray: #90aaff;
+    --clr-gray-alt: #161515;
+}

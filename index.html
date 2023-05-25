@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="./img/favicon.svg" />
+    <link rel="mask-icon" href="./img/favicon.svg" color="#4d7be6" />
+    <link rel="apple-touch-icon" href="./img/favicon.png" />
+    <meta name="theme-color" content="#1c1c1c" />
+
+    <link rel="alternate" href="https://www.gabrielurquiza.com" hreflang="es" />
+    <link rel="alternate" href="https://www.gabrielurquiza.com/en" hreflang="en" />
+    <link rel="alternate" href="https://www.gabrielurquiza.com/en" hreflang="x-default" />
+
+    <title>Gabriel Urquiza — Desarrollador Web</title>
+    <meta name="description" content="Desarrollador Web de tu sitio html." />
+    <meta name="keywords"
+        content="desarrollo web, desarrollador frontend, sitio web, gabriel urquiza, html, css, javascript" />
+    <meta name="author" content="Gabriel Urquiza" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Gabriel Urquiza — Desarrollador Frontend" />
+    <meta property="og:description"
+        content="Desarrollador Frontend con más de 9 años de experiencia y Profesor de Desarrollo Web. Creador de contenido en YouTube." />
+    <meta property="og:image" content="./img/og-es.png" />
+    <meta property="og:url" content="https://gabrielurquiza.com" />
+    <meta property="og:locale" content="es_ES" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="./scss/styles.css" />
+
+    <link rel="stylesheet" href="../wow/animate.css" />
+</head>
+
+<body class="grid">
+    <header class="header container-xxl">
+        <nav class="navbar container-xxl">
+            <ul>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="./pages/about.html">SOBRE MÍ</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="./pages/projects.html">TRABAJOS</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="./pages/contact.html">CONTACTO</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main container-xxl">
+        <h1 class="title">Gabriel Urquiza</h1>
+        <p class="subtitle">Desarrollador Frontend</p>
+        <p class="paragraph">
+            Nacido y viviendo en
+            <span class="flag" aria-hidden="true">🇦🇷</span> Argentina,
+        </p>
+        <p class="paragraph">En busca de nuevos desafíos y experiencias.</p>
+    </main>
+
+    <footer class="footer main-footer container-xxl" aria-label="Pie de página">
+        <nav class="main-footer-inner">
+            <div class="main-buttons">
+                <a class="colorbutton" href="./en" data-tooltip="Switch to English" data-tooltip-bottom
+                    aria-label="Switch to English" id="button-language">
+                    <ion-icon name="language-outline"> </ion-icon>
+                </a>
+                <button class="colorbutton" aria-hidden="true" id="color-mode">
+                    <ion-icon name="contrast-outline"></ion-icon>
+                </button>
+
+                <a class="ig" target="_blank" href="https://instagram.com/gabidesarrolloweb" data-tooltip="Instagram"
+                    aria-label="Instagram (abre en una nueva pestaña)">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a class="github" target="_blank" href="https://github.com/gudesarrolloweb?tab=repositories"
+                    data-tooltip="GitHub" aria-label="GitHub (abre en una nueva pestaña)">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a class="linkedin" target="_blank" href="https://linkedin.com/in/gabrielurquiza"
+                    data-tooltip="LinkedIn" aria-label="LinkedIn (abre en una nueva pestaña)">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+            </div>
+        </nav>
+    </footer>
+
+    <!-- IONICONS -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- RELLAX JS-->
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+    <script>
+        var rellax = new Rellax(".rellax", { center: true });
+        var rellaxNotCentered = new Rellax(".rellax-not-centered");
+    </script>
+
+    <!-- SWIPER JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
+
+    <!-- OWN SCRIPTS -->
+    <script src="./js/loader.js"></script>
+    <script src="./js/color-mode.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/subscribers.js"></script>
+    <script src="./js/language.js"></script>
+</body>
+
+</html>
