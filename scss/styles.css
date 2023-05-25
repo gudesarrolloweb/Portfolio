@@ -157,6 +157,9 @@
   text-decoration: none;
   color: rgba(0, 0, 0, 0.8705882353);
 }
+.grid .header .navbarproject::-webkit-scrollbar {
+  display: none;
+}
 .grid .header .navbarproject {
   display: flex;
   text-align: center;
@@ -173,7 +176,7 @@
   text-decoration: none;
 }
 .grid .header .navbarproject .navbar-item .project-link .titleproject {
-  font-size: 4.2rem;
+  font-size: 4rem;
   color: rgba(0, 0, 0, 0.8705882353);
   margin-bottom: -1.2rem;
 }

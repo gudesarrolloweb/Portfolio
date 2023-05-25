@@ -1,51 +1,53 @@
 .grid {
-    .header {
-            .line {
-                border-top: 1px solid black;
-                height: 2px;
-                padding: 0;
-                margin: 3rem 10rem 0 0;
-            }
-
-            .home {
-                display: flex;
-                justify-content: end;
-                margin-top: -0.8rem;
-                margin-right: 10%;
-            }
-
-            .home a {
-                text-decoration: none;
-                color: $black;
-            }
-
-        .navbarproject {
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            margin-bottom: -5rem;
-            margin-right: 10%;
-            height: 450px;
-            overflow-y: scroll;
-
-            .navbar-item {
-                list-style: none;
-
-                .project-link {
-                    text-decoration: none;
-
-                    .titleproject {
-                        font-size: 4.2rem;
-                        color: $black;
-                        margin-bottom: -1.2rem;
-                    }
-
-                    .paragraphproject {
-                        font-size: 1.5rem;
-                        color: $black;
-                    }
-                }
-            }
-        }
+  .header {
+    .line {
+      border-top: 1px solid black;
+      height: 2px;
+      padding: 0;
+      margin: 3rem 10rem 0 0;
     }
+
+    .home {
+      display: flex;
+      justify-content: end;
+      margin-top: -0.8rem;
+      margin-right: 10%;
+    }
+
+    .home a {
+      text-decoration: none;
+      color: $black;
+    }
+    .navbarproject::-webkit-scrollbar {
+      display: none;
+    }
+    .navbarproject {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      margin-bottom: -5rem;
+      margin-right: 10%;
+      height: 450px;
+      overflow-y: scroll;
+
+      .navbar-item {
+        list-style: none;
+
+        .project-link {
+          text-decoration: none;
+
+          .titleproject {
+            font-size: 4rem;
+            color: $black;
+            margin-bottom: -1.2rem;
+          }
+
+          .paragraphproject {
+            font-size: 1.5rem;
+            color: $black;
+          }
+        }
+      }
+    }
+  }
 }
