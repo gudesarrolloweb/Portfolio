@@ -33,22 +33,22 @@
   color: var(--clr-bg);
 }
 
-.grid {
+.maingrid {
   display: grid;
   grid-template-columns: 10% 90%;
   grid-template-areas: "footer1  mainindex";
 }
-.grid .mainindex {
+.maingrid .mainindex {
   display: grid;
   grid-area: mainindex;
   grid-template-columns: 40% 60%;
   grid-template-areas: "mainme  mainlinks";
 }
-.grid .mainindex .mainme {
+.maingrid .mainindex .mainme {
   display: grid;
   grid-area: mainme;
 }
-.grid .mainindex .mainme .maintext {
+.maingrid .mainindex .mainme .maintext {
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -56,39 +56,39 @@
   padding-left: 1rem;
   padding-right: 1.5rem;
 }
-.grid .mainindex .mainme .maintext h1 {
+.maingrid .mainindex .mainme .maintext h1 {
   font-size: calc(12px + 4vh);
   margin-top: 5vw;
 }
-.grid .mainindex .mainme .maintext .title {
+.maingrid .mainindex .mainme .maintext .title {
   color: rgba(0, 0, 0, 0.8705882353);
 }
-.grid .mainindex .mainme .maintext .subtitle {
+.maingrid .mainindex .mainme .maintext .subtitle {
   font-size: calc(12px + 2.5vh);
   color: rgba(0, 0, 0, 0.8705882353);
 }
-.grid .mainindex .mainme .maintext .paragraph {
+.maingrid .mainindex .mainme .maintext .paragraph {
   font-size: calc(12px + 1vh);
   color: rgba(0, 0, 0, 0.8705882353);
 }
-.grid .mainindex .mainlinks {
+.maingrid .mainindex .mainlinks {
   display: grid;
   grid-area: mainlinks;
 }
-.grid .mainindex .mainlinks .pageslinks {
+.maingrid .mainindex .mainlinks .pageslinks {
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
 }
-.grid .mainindex .mainlinks .pageslinks .main2-item {
+.maingrid .mainindex .mainlinks .pageslinks .main2-item {
   list-style: none;
 }
-.grid .mainindex .mainlinks .pageslinks .main2-item .main2-link {
+.maingrid .mainindex .mainlinks .pageslinks .main2-item .main2-link {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.8705882353);
   font-size: 10vw;
 }
-.grid .footer {
+.maingrid .footer {
   grid-area: footer1;
   z-index: 600;
   width: 6%;
@@ -102,15 +102,15 @@
   display: flex;
   position: fixed;
 }
-.grid .main-footer {
+.maingrid .main-footer {
   padding-block: 3vw;
 }
-.grid .main-footer .main-footer-inner a {
+.maingrid .main-footer .main-footer-inner a {
   font-size: 2.4vw;
   color: var(--clr-text);
   transition: 0.2s;
 }
-.grid .main-footer .main-buttons {
+.maingrid .main-footer .main-buttons {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -118,24 +118,24 @@
   gap: 1vw;
   margin-left: 0.5rem;
 }
-.grid .main-footer .main-buttons .main-footer-inner ion-icon {
+.maingrid .main-footer .main-buttons .main-footer-inner ion-icon {
   pointer-events: none;
   display: flex;
 }
-.grid .main-footer .main-buttons .colorbutton {
+.maingrid .main-footer .main-buttons .colorbutton {
   font-size: calc(12px + 2.5vh);
   color: var(--clr-text);
   transition: 0.2s;
   margin-top: -1.5vw;
   margin-bottom: 1vw;
 }
-.grid .main-footer .main-buttons .ig,
-.grid .main-footer .main-buttons .github,
-.grid .main-footer .main-buttons .linkedin {
+.maingrid .main-footer .main-buttons .ig,
+.maingrid .main-footer .main-buttons .github,
+.maingrid .main-footer .main-buttons .linkedin {
   font-size: calc(12px + 3vh);
 }
-.grid .main-footer .main-buttons > button,
-.grid .main-footer .main-buttons > a {
+.maingrid .main-footer .main-buttons > button,
+.maingrid .main-footer .main-buttons > a {
   border: 0;
   background-color: transparent;
   display: flex;
@@ -143,15 +143,15 @@
   cursor: pointer;
 }
 @media (hover: hover) {
-  .grid .main-buttons > button:hover,
-  .grid .main-buttons > a:hover {
+  .maingrid .main-buttons > button:hover,
+  .maingrid .main-buttons > a:hover {
     border: 0;
     background-color: transparent;
     color: var(--clr-botton);
     cursor: pointer;
   }
 }
-.grid .main-buttons ion-icon {
+.maingrid .main-buttons ion-icon {
   pointer-events: none;
 }
 
@@ -199,29 +199,64 @@
   color: rgba(0, 0, 0, 0.8705882353);
 }
 
-.grid .header .lineabout {
-  border-top: 1px solid black;
-  height: 2px;
-  padding: 0;
-  margin: 3rem 10rem 0 0;
+.aboutgrid {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  grid-template-areas: "about-footer  headermainabout";
 }
-.grid .header .homeabout {
+.aboutgrid .headermainabout {
+  display: grid;
+  grid-area: headermainabout;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 80%;
+  grid-template-areas: "gohome" "aboutme";
+}
+.aboutgrid .headermainabout .gohome {
+  display: grid;
+  grid-area: gohome;
+}
+.aboutgrid .headermainabout .aboutme {
+  display: grid;
+  grid-area: aboutme;
+  grid-template-columns: 40% 60%;
+  grid-template-areas: "aboutmetext  aboutlinks";
+}
+.aboutgrid .headermainabout .aboutme .aboutmetext {
+  grid-area: aboutmetext;
   display: flex;
+  flex-direction: column;
   justify-content: end;
-  margin-top: -0.8rem;
-  margin-right: 10%;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
-.grid .header .homeabout a {
-  text-decoration: none;
+.aboutgrid .headermainabout .aboutme .aboutmetext h1 {
+  font-size: calc(12px + 4vh);
+  margin-top: 5vw;
+}
+.aboutgrid .headermainabout .aboutme .aboutmetext .title {
   color: rgba(0, 0, 0, 0.8705882353);
 }
-.grid .navbarabout {
-  margin: 2rem;
-  /*SKILLS*/
+.aboutgrid .headermainabout .aboutme .aboutmetext .subtitle {
+  font-size: calc(12px + 2.5vh);
+  color: rgba(0, 0, 0, 0.8705882353);
 }
-.grid .navbarabout .skills-list {
+.aboutgrid .headermainabout .aboutme .aboutlinks {
+  grid-area: aboutlinks;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+.aboutgrid .headermainabout .aboutme .aboutlinks .skills-titles {
+  font-size: 4vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.aboutgrid .headermainabout .aboutme .aboutlinks .skills-list {
   margin-top: 1vw;
   display: flex;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
@@ -231,7 +266,7 @@
   row-gap: 0.5vw;
   list-style: none;
 }
-.grid .navbarabout .skills-list .skill {
+.aboutgrid .headermainabout .aboutme .aboutlinks .skills-list .skill {
   background-color: #f3f5e2;
   padding: 0.5vw 0.75vw;
   border-radius: 0.25vw;
@@ -239,39 +274,98 @@
   transition: 0.2s;
   font-size: 1.2vw;
 }
-.grid .navbarabout .skills-list .skills-titles {
-  font-size: 4vw;
-}
-.grid .navbarabout .skills-list .mainaboutme .skills-list {
+.aboutgrid .headermainabout .aboutme .aboutlinks .skills-list .mainaboutme .skills-list {
   margin-top: 2vw;
 }
 @media (hover: hover) {
-  .grid .navbarabout .skills-list .skill:hover {
+  .aboutgrid .headermainabout .aboutme .aboutlinks .skills-list .skill:hover {
     border-color: #ffffff;
     background-color: rgba(0, 0, 0, 0.8705882353);
     color: #ffffff;
   }
 }
-.grid .mainaboutme {
-  display: grid;
-  grid-area: main1;
-  padding-top: 92%;
-  max-width: 40vw;
+.aboutgrid .footer {
+  z-index: 600;
+  width: 6%;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 5%;
+  padding-bottom: 3vw;
+  margin-bottom: 1vw;
+  display: flex;
+  position: fixed;
 }
-.grid .mainaboutme .titleaboutme {
-  color: rgba(0, 0, 0, 0.8705882353);
-  margin: 0.3vw;
-  font-size: 5vw;
+.aboutgrid .about-footer {
+  grid-area: about-footer;
+  padding-block: 3vw;
 }
-.grid .mainaboutme .subtitle {
-  font-size: 1.5vw;
-  color: rgba(0, 0, 0, 0.8705882353);
-  margin: 0.3vw;
+.aboutgrid .about-footer .about-footer-inner a {
+  font-size: 2.4vw;
+  color: var(--clr-text);
+  transition: 0.2s;
 }
-.grid .mainaboutme .paragraph {
-  font-size: 1.1vw;
+.aboutgrid .about-footer .about-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  margin-left: 0.5rem;
+}
+.aboutgrid .about-footer .about-buttons .about-footer-inner ion-icon {
+  pointer-events: none;
+  display: flex;
+}
+.aboutgrid .about-footer .about-buttons .colorbutton {
+  font-size: calc(12px + 2.5vh);
+  color: var(--clr-text);
+  transition: 0.2s;
+  margin-top: -1.5vw;
+  margin-bottom: 1vw;
+}
+.aboutgrid .about-footer .about-buttons .ig,
+.aboutgrid .about-footer .about-buttons .github,
+.aboutgrid .about-footer .about-buttons .linkedin {
+  font-size: calc(12px + 3vh);
+}
+.aboutgrid .about-footer .about-buttons > button,
+.aboutgrid .about-footer .about-buttons > a {
+  border: 0;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+@media (hover: hover) {
+  .aboutgrid .about-buttons > button:hover,
+  .aboutgrid .about-buttons > a:hover {
+    border: 0;
+    background-color: transparent;
+    color: var(--clr-botton);
+    cursor: pointer;
+  }
+}
+.aboutgrid .about-buttons ion-icon {
+  pointer-events: none;
+}
+
+.header .lineabout {
+  border-top: 1px solid black;
+  height: 2px;
+  padding: 0;
+  margin: 3rem 15rem 0 0;
+}
+.header .homeabout {
+  display: flex;
+  justify-content: end;
+  margin-top: -0.8rem;
+  margin-right: 10%;
+}
+.header .homeabout a {
+  text-decoration: none;
   color: rgba(0, 0, 0, 0.8705882353);
-  margin: 0.3vw 0.3vw 0vw 0.3vw;
 }
 
 .grid .header .linecontact {
@@ -315,18 +409,19 @@
 }
 
 @media screen and (max-width: 992px) {
-  .grid .mainindex {
+  /* INDEX*/
+  .maingrid .mainindex {
     display: grid;
     grid-area: mainindex;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "mainme" "mainlinks";
   }
-  .grid .mainindex .mainme {
+  .maingrid .mainindex .mainme {
     display: grid;
     grid-area: mainme;
   }
-  .grid .mainindex .mainme .maintext {
+  .maingrid .mainindex .mainme .maintext {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -336,33 +431,57 @@
     padding-left: 1rem;
     padding-right: 1.5rem;
   }
-  .grid .mainindex .mainme .maintext h1 {
+  .maingrid .mainindex .mainme .maintext h1 {
     font-size: calc(12px + 6vw);
     margin-top: 5vw;
   }
-  .grid .mainindex .mainme .maintext .title {
+  .maingrid .mainindex .mainme .maintext .title {
     color: rgba(0, 0, 0, 0.8705882353);
   }
-  .grid .mainindex .mainme .maintext .subtitle {
+  .maingrid .mainindex .mainme .maintext .subtitle {
     font-size: calc(12px + 3.5vw);
     color: rgba(0, 0, 0, 0.8705882353);
   }
-  .grid .mainindex .mainme .maintext .paragraph {
+  .maingrid .mainindex .mainme .maintext .paragraph {
     font-size: calc(12px + 2vw);
     color: rgba(0, 0, 0, 0.8705882353);
   }
-  .grid .mainindex .mainlinks {
+  .maingrid .mainindex .mainlinks {
     display: grid;
     grid-area: mainlinks;
   }
-  .grid .mainindex .mainlinks .pageslinks {
+  .maingrid .mainindex .mainlinks .pageslinks {
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
     justify-content: center;
     text-align: center;
   }
-  .grid .mainindex .mainlinks .pageslinks .main2-item .main2-link {
+  .maingrid .mainindex .mainlinks .pageslinks .main2-item .main2-link {
     font-size: 12vw;
+  }
+  /* ABOUT*/
+  .aboutgrid .headermainabout .aboutme {
+    display: grid;
+    grid-area: aboutme;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "aboutmetext" "aboutlinks";
+  }
+  .aboutgrid .headermainabout .aboutme .aboutmetext {
+    grid-area: aboutmetext;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .aboutgrid .headermainabout .aboutme .aboutmetext h1 {
+    font-size: calc(12px + 3vw);
+  }
+  .aboutgrid .headermainabout .aboutme .aboutmetext .subtitle {
+    font-size: calc(12px + 1.5vw);
   }
 }/*# sourceMappingURL=styles.css.map */

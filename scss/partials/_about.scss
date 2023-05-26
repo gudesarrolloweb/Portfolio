@@ -1,84 +1,177 @@
-.grid {
-    .header {
-        .lineabout {
-          border-top: 1px solid black;
-          height: 2px;
-          padding: 0;
-          margin: 3rem 10rem 0 0;
+.aboutgrid {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  grid-template-areas: "about-footer  headermainabout";
+
+  .headermainabout {
+    display: grid;
+    grid-area: headermainabout;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas:
+      "gohome"
+      "aboutme";
+    .gohome {
+      display: grid;
+      grid-area: gohome;
+    }
+    .aboutme {
+      display: grid;
+      grid-area: aboutme;
+      grid-template-columns: 40% 60%;
+      grid-template-areas: "aboutmetext  aboutlinks";
+
+      .aboutmetext {
+        grid-area: aboutmetext;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        margin-bottom: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        h1 {
+          font-size: calc(12px + 4vh);
+          margin-top: 5vw;
         }
-    
-        .homeabout {
-          display: flex;
-          justify-content: end;
-          margin-top: -0.8rem;
-          margin-right: 10%;
-        }
-    
-        .homeabout a {
-          text-decoration: none;
+        .title {
           color: $black;
         }
-    }
-    .navbarabout{
-        margin:2rem;
-        /*SKILLS*/
-        .skills-list {
-            margin-top: 1vw;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 1vw;
-            column-gap: 1vw;
-            row-gap: .5vw;
-            list-style: none;
-
-            .skill {
-                background-color: $gray;
-                padding: .5vw .75vw;
-                border-radius: .25vw;
-                border: 1px solid $lightblack;
-                transition: .2s;
-                font-size: 1.2vw;
-            }
-            .skills-titles {
-                font-size: 4vw;
-            }
-            .mainaboutme .skills-list {
-                margin-top: 2vw;
-            }
-
-        @media (hover: hover) {
-            .skill:hover {
-                border-color: $white;
-                background-color: $black;
-                color: $white;
-            }
-        }
-    }
-    }
-    .mainaboutme {
-        display: grid;
-        grid-area: main1;
-        padding-top: 92%;
-        max-width: 40vw;
-
-        .titleaboutme {
-            color: $black;
-            margin: 0.3vw;
-            font-size: 5vw;
-        }
-
         .subtitle {
-            font-size: 1.5vw;
-            color: $black;
-            margin: 0.3vw;
+          font-size: calc(12px + 2.5vh);
+          color: $black;
         }
+      }
+      .aboutlinks {
+        grid-area: aboutlinks;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        .skills-titles {
+          font-size: 4vw;
+          display: flex;
+          justify-content: center;
+          margin-top: 1rem;
+        }
+        .skills-list {
+          margin-top: 1vw;
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 1vw;
+          column-gap: 1vw;
+          row-gap: 0.5vw;
+          list-style: none;
 
-        .paragraph {
-            font-size: 1.1vw;
-            color: $black;
-            margin: 0.3vw 0.3vw 0vw 0.3vw;
+          .skill {
+            background-color: $gray;
+            padding: 0.5vw 0.75vw;
+            border-radius: 0.25vw;
+            border: 1px solid $lightblack;
+            transition: 0.2s;
+            font-size: 1.2vw;
+          }
+          .mainaboutme .skills-list {
+            margin-top: 2vw;
+          }
+
+          @media (hover: hover) {
+            .skill:hover {
+              border-color: $white;
+              background-color: $black;
+              color: $white;
+            }
+          }
         }
+      }
     }
+  }
+  .footer {
+    z-index: 600;
+    width: 6%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 5%;
+    padding-bottom: 3vw;
+    margin-bottom: 1vw;
+    display: flex;
+    position: fixed;
+  }
+  .about-footer {
+    grid-area: about-footer;
+    padding-block: 3vw;
+    .about-footer-inner a {
+      font-size: 2.4vw;
+      color: var(--clr-text);
+      transition: 0.2s;
+    }
+    .about-buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1vw;
+      margin-left: 0.5rem;
+      .about-footer-inner ion-icon {
+        pointer-events: none;
+        display: flex;
+      }
+      .colorbutton {
+        font-size: calc(12px + 2.5vh);
+        color: var(--clr-text);
+        transition: 0.2s;
+        margin-top: -1.5vw;
+        margin-bottom: 1vw;
+      }
+      .ig,
+      .github,
+      .linkedin {
+        font-size: calc(12px + 3vh);
+      }
+    }
+    .about-buttons > button,
+    .about-buttons > a {
+      border: 0;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+  @media (hover: hover) {
+    .about-buttons > button:hover,
+    .about-buttons > a:hover {
+      border: 0;
+      background-color: transparent;
+      color: var(--clr-botton);
+      cursor: pointer;
+    }
+  }
+  .about-buttons ion-icon {
+    pointer-events: none;
+  }
+}
+
+.header {
+  .lineabout {
+    border-top: 1px solid black;
+    height: 2px;
+    padding: 0;
+    margin: 3rem 15rem 0 0;
+  }
+
+  .homeabout {
+    display: flex;
+    justify-content: end;
+    margin-top: -0.8rem;
+    margin-right: 10%;
+  }
+
+  .homeabout a {
+    text-decoration: none;
+    color: $black;
+  }
 }
