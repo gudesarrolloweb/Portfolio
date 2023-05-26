@@ -35,46 +35,58 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 10% 30% 60%;
-  grid-template-areas: "footer1 main1 header1";
+  grid-template-columns: 10% 90%;
+  grid-template-areas: "footer1  mainindex";
 }
-.grid .header {
+.grid .mainindex {
   display: grid;
-  grid-area: header1;
+  grid-area: mainindex;
+  grid-template-columns: 40% 60%;
+  grid-template-areas: "mainme  mainlinks";
 }
-.grid .header .navbar {
+.grid .mainindex .mainme {
+  display: grid;
+  grid-area: mainme;
+}
+.grid .mainindex .mainme .maintext {
   display: flex;
-  margin-top: 5%;
-  padding: 2vw;
+  flex-direction: column;
+  justify-content: end;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  padding-right: 1.5rem;
 }
-.grid .header .navbar .navbar-item {
-  list-style: none;
-}
-.grid .header .navbar .navbar-item .navbar-link {
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.8705882353);
-  font-size: 10vw;
-}
-.grid .main {
-  display: grid;
-  grid-area: main1;
-  margin-top: 75%;
-  padding: 1.5vw;
-}
-.grid .main h1 {
+.grid .mainindex .mainme .maintext h1 {
   font-size: calc(12px + 4vh);
   margin-top: 5vw;
 }
-.grid .main .title {
+.grid .mainindex .mainme .maintext .title {
   color: rgba(0, 0, 0, 0.8705882353);
 }
-.grid .main .subtitle {
+.grid .mainindex .mainme .maintext .subtitle {
   font-size: calc(12px + 2.5vh);
   color: rgba(0, 0, 0, 0.8705882353);
 }
-.grid .main .paragraph {
+.grid .mainindex .mainme .maintext .paragraph {
   font-size: calc(12px + 1vh);
   color: rgba(0, 0, 0, 0.8705882353);
+}
+.grid .mainindex .mainlinks {
+  display: grid;
+  grid-area: mainlinks;
+}
+.grid .mainindex .mainlinks .pageslinks {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.grid .mainindex .mainlinks .pageslinks .main2-item {
+  list-style: none;
+}
+.grid .mainindex .mainlinks .pageslinks .main2-item .main2-link {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8705882353);
+  font-size: 10vw;
 }
 .grid .footer {
   grid-area: footer1;
@@ -117,7 +129,9 @@
   margin-top: -1.5vw;
   margin-bottom: 1vw;
 }
-.grid .main-footer .main-buttons .ig, .grid .main-footer .main-buttons .github, .grid .main-footer .main-buttons .linkedin {
+.grid .main-footer .main-buttons .ig,
+.grid .main-footer .main-buttons .github,
+.grid .main-footer .main-buttons .linkedin {
   font-size: calc(12px + 3vh);
 }
 .grid .main-footer .main-buttons > button,
@@ -298,562 +312,4 @@
 }
 .grid .maincontact .subtitlecontact .email {
   color: black;
-}
-
-@media screen and (max-width: 992px) {
-  .grid {
-    /******************************************* INDEX *************************************************/
-    display: grid;
-    grid-template-columns: 10% 90%;
-    grid-template-rows: 50% 50%;
-    grid-template-areas: "footer1  main1" "footer1  header1";
-    /* INDEX */
-    /* CONTACT */
-    /************************************************ ABOUT ****************************************************/
-    /* ABOUT */
-    /******************************************************** PROJECT **************************************************/
-  }
-  .grid .header {
-    display: grid;
-    grid-area: header1;
-    /* CONTACT */
-  }
-  .grid .header .gohome {
-    margin-top: -25rem;
-  }
-  .grid .header .navbar {
-    display: flex;
-    margin-top: -2rem;
-    margin-bottom: 1rem;
-    padding-right: 2vw;
-    padding-left: 2vw;
-    padding-top: 0rem;
-    padding-bottom: 0rem;
-    justify-content: center;
-    text-align: center;
-  }
-  .grid .header .navbar .navbar-item .navbar-link {
-    font-size: calc(12px + 13vw);
-  }
-  .grid .header .linecontact {
-    margin: -9rem 10rem 0 0;
-  }
-  .grid .main {
-    display: grid;
-    grid-area: main1;
-    margin-top: 20%;
-    margin-bottom: 10rem;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 1.5vw;
-    text-align: center;
-  }
-  .grid .main h1 {
-    font-size: calc(12px + 4.5vw);
-    margin-top: 5vw;
-  }
-  .grid .main .subtitle {
-    font-size: calc(12px + 3vw);
-    color: rgba(0, 0, 0, 0.8705882353);
-  }
-  .grid .main .paragraph {
-    font-size: calc(12px + 1.5vw);
-  }
-  .grid .maincontact {
-    display: grid;
-    grid-area: main1;
-    margin-top: 15%;
-    max-width: 40rem;
-    margin-bottom: 2rem;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-  }
-  .grid .maincontact .titlecontact {
-    font-size: 28vh;
-  }
-  .grid .maincontact .subtitlecontact {
-    padding-right: 2rem;
-    padding-left: 2rem;
-    font-size: 5.37vh;
-  }
-  .grid .footer {
-    grid-area: footer1;
-    z-index: 600;
-    width: 6%;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding-top: 5%;
-    padding-bottom: 30px;
-    display: flex;
-    position: fixed;
-  }
-  .grid .main-footer {
-    padding-block: 3rem;
-  }
-  .grid .main-footer .main-footer-inner a {
-    color: var(--clr-text);
-    transition: 0.2s;
-  }
-  .grid .main-footer .main-buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-  }
-  .grid .main-footer .main-buttons .main-footer-inner ion-icon {
-    pointer-events: none;
-    display: flex;
-  }
-  .grid .main-footer .main-buttons .colorbutton {
-    color: var(--clr-text);
-    transition: 0.2s;
-    margin-top: -1.5rem;
-    margin-bottom: 1rem;
-  }
-  .grid .main-footer .main-buttons > button,
-  .grid .main-footer .main-buttons > a {
-    border: 0;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-  .grid .header .lineabout {
-    height: 2px;
-    padding: 0;
-    margin: -12rem 40vh 0 0;
-  }
-  .grid .header .homeabout {
-    display: flex;
-    justify-content: end;
-    margin-top: -0.85rem;
-    margin-right: 10%;
-  }
-  .grid .header .navbarabout {
-    margin: 2rem;
-    /*SKILLS*/
-  }
-  .grid .header .navbarabout .skills-list {
-    margin-top: 1vw;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 1vw;
-    -moz-column-gap: 1vw;
-         column-gap: 1vw;
-    row-gap: 0.5vw;
-    list-style: none;
-    padding-right: 2rem;
-    padding-left: 2rem;
-  }
-  .grid .header .navbarabout .skills-list .skill {
-    background-color: #f3f5e2;
-    padding: 0.5vw 0.75vw;
-    border-radius: 0.25vw;
-    border: 1px solid #444444;
-    transition: 0.2s;
-    font-size: 4.2vh;
-  }
-  .grid .header .navbarabout .skills-list .skills-titles {
-    font-size: 11vh;
-  }
-  .grid .header .navbarabout .skills-list .mainaboutme .skills-list {
-    margin-top: 2vw;
-  }
-}
-@media screen and (max-width: 992px) and (hover: hover) {
-  .grid .header .navbarabout .skills-list .skill:hover {
-    border-color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.8705882353);
-    color: #ffffff;
-  }
-}
-@media screen and (max-width: 992px) {
-  .grid .mainaboutme {
-    display: grid;
-    grid-area: main1;
-    padding-top: 20%;
-    max-width: 100%;
-    margin-top: 10rem;
-    padding-top: 0rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    justify-content: center;
-    text-align: center;
-  }
-  .grid .mainaboutme .titleaboutme {
-    font-size: 13vh;
-  }
-  .grid .mainaboutme .subtitle {
-    font-size: 6vh;
-  }
-  .grid .mainaboutme .paragraph {
-    font-size: 1.1vw;
-    color: rgba(0, 0, 0, 0.8705882353);
-    margin: 0.3vw 0.3vw 0vw 0.3vw;
-  }
-}
-@media screen and (max-width: 992px) {
-  .grid .header .lineproject {
-    margin: -25rem 10rem 0 0;
-  }
-}
-@media screen and (max-width: 695px) {
-  .grid {
-    /* ABOUT */
-  }
-  .grid .maincontact {
-    margin-top: 35%;
-  }
-  .grid .header {
-    /* CONTACT */
-    /* PROJECT */
-    /* ABOUT */
-  }
-  .grid .header .linecontact {
-    margin: -10rem 10rem 0 0;
-  }
-  .grid .header .lineproject {
-    margin: -23rem 10rem 0 0;
-  }
-  .grid .header .lineabout {
-    height: 2px;
-    padding: 0;
-    margin: -14rem 40vh 0 0;
-  }
-  .grid .header .homeabout {
-    display: flex;
-    justify-content: end;
-    margin-top: -0.85rem;
-    margin-right: 10%;
-  }
-  .grid .header .navbarabout {
-    margin: 2rem;
-    /*SKILLS*/
-  }
-  .grid .header .navbarabout .skills-list {
-    margin-top: 1vw;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 1vw;
-    -moz-column-gap: 1vw;
-         column-gap: 1vw;
-    row-gap: 1.5vw;
-    list-style: none;
-    padding-right: 2rem;
-    padding-left: 2rem;
-  }
-  .grid .header .navbarabout .skills-list .skill {
-    background-color: #f3f5e2;
-    padding: 0.5vw 0.75vw;
-    border-radius: 0.25vw;
-    border: 1px solid #444444;
-    transition: 0.2s;
-    font-size: 4.2vh;
-  }
-  .grid .header .navbarabout .skills-list .skills-titles {
-    font-size: 9vh;
-  }
-  .grid .header .navbarabout .skills-list .mainaboutme .skills-list {
-    margin-top: 0vw;
-  }
-}
-@media screen and (max-width: 695px) and (hover: hover) {
-  .grid .header .navbarabout .skills-list .skill:hover {
-    border-color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.8705882353);
-    color: #ffffff;
-  }
-}
-@media screen and (max-width: 695px) {
-  .grid .mainaboutme {
-    display: grid;
-    grid-area: main1;
-    padding-top: 20%;
-    max-width: 100%;
-    margin-top: 10rem;
-    padding-top: 0rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
-    justify-content: center;
-    text-align: center;
-  }
-  .grid .mainaboutme .titleaboutme {
-    font-size: 13vh;
-  }
-  .grid .mainaboutme .subtitle {
-    font-size: 6vh;
-  }
-  .grid .mainaboutme .paragraph {
-    font-size: 1.1vw;
-    color: rgba(0, 0, 0, 0.8705882353);
-    margin: 0.3vw 0.3vw 0vw 0.3vw;
-  }
-}
-@media screen and (max-width: 510px) {
-  .grid {
-    /* ABOUT */
-  }
-  .grid .header {
-    /*PROJECT*/
-    /* ABOUT */
-  }
-  .grid .header .lineproject {
-    margin: -21rem 10rem 0 0;
-  }
-  .grid .header .navbarproject .navbar-item .project-link .titleproject {
-    font-size: 3.2rem;
-    margin-bottom: -1.2rem;
-  }
-  .grid .header .navbarproject .navbar-item .project-link .paragraphproject {
-    font-size: 1rem;
-  }
-  .grid .header .lineabout {
-    height: 2px;
-    padding: 0;
-    margin: -17rem 40vh 0 0;
-  }
-  .grid .header .homeabout {
-    display: flex;
-    justify-content: end;
-    margin-top: -0.85rem;
-    margin-right: 10%;
-  }
-  .grid .header .navbarabout {
-    margin: 2rem;
-    /*SKILLS*/
-  }
-  .grid .header .navbarabout .skills-list {
-    margin-top: 1vw;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 1vw;
-    -moz-column-gap: 1vw;
-         column-gap: 1vw;
-    row-gap: 1.5vw;
-    list-style: none;
-    padding-right: 2rem;
-    padding-left: 2rem;
-  }
-  .grid .header .navbarabout .skills-list .skill {
-    background-color: #f3f5e2;
-    padding: 0.5vw 0.75vw;
-    border-radius: 0.25vw;
-    border: 1px solid #444444;
-    transition: 0.2s;
-    font-size: 4.2vh;
-  }
-  .grid .header .navbarabout .skills-list .skills-titles {
-    font-size: 9vh;
-  }
-  .grid .header .navbarabout .skills-list .mainaboutme .skills-list {
-    margin-top: 0vw;
-  }
-}
-@media screen and (max-width: 510px) and (hover: hover) {
-  .grid .header .navbarabout .skills-list .skill:hover {
-    border-color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.8705882353);
-    color: #ffffff;
-  }
-}
-@media screen and (max-width: 510px) {
-  .grid .mainaboutme {
-    display: grid;
-    grid-area: main1;
-    padding-top: 20%;
-    max-width: 100%;
-    margin-top: 10rem;
-    padding-top: 0rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
-    justify-content: center;
-    text-align: center;
-  }
-  .grid .mainaboutme .titleaboutme {
-    font-size: 13vh;
-  }
-  .grid .mainaboutme .subtitle {
-    font-size: 6vh;
-  }
-  .grid .mainaboutme .paragraph {
-    font-size: 1.1vw;
-    color: rgba(0, 0, 0, 0.8705882353);
-    margin: 0.3vw 0.3vw 0vw 0.3vw;
-  }
-}
-@media screen and (max-width: 435px) {
-  .grid {
-    /* ABOUT */
-  }
-  .grid .header {
-    /* ABOUT */
-  }
-  .grid .header .lineabout {
-    height: 2px;
-    padding: 0;
-    margin: -20rem 40vh 0 0;
-  }
-  .grid .header .homeabout {
-    display: flex;
-    justify-content: end;
-    margin-top: -0.85rem;
-    margin-right: 10%;
-  }
-  .grid .header .navbarabout {
-    margin: 2rem;
-    /*SKILLS*/
-  }
-  .grid .header .navbarabout .skills-list {
-    margin-top: 1vw;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 1vw;
-    -moz-column-gap: 1vw;
-         column-gap: 1vw;
-    row-gap: 1.5vw;
-    list-style: none;
-    padding-right: 2rem;
-    padding-left: 2rem;
-  }
-  .grid .header .navbarabout .skills-list .skill {
-    background-color: #f3f5e2;
-    padding: 0.5vw 0.75vw;
-    border-radius: 0.25vw;
-    border: 1px solid #444444;
-    transition: 0.2s;
-    font-size: 4.2vh;
-  }
-  .grid .header .navbarabout .skills-list .skills-titles {
-    font-size: 9vh;
-  }
-  .grid .header .navbarabout .skills-list .mainaboutme .skills-list {
-    margin-top: 0vw;
-  }
-}
-@media screen and (max-width: 435px) and (hover: hover) {
-  .grid .header .navbarabout .skills-list .skill:hover {
-    border-color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.8705882353);
-    color: #ffffff;
-  }
-}
-@media screen and (max-width: 435px) {
-  .grid .mainaboutme {
-    display: grid;
-    grid-area: main1;
-    padding-top: 20%;
-    max-width: 100%;
-    margin-top: 10rem;
-    padding-top: 0rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    justify-content: center;
-    text-align: center;
-  }
-  .grid .mainaboutme .titleaboutme {
-    font-size: 13vh;
-  }
-  .grid .mainaboutme .subtitle {
-    font-size: 6vh;
-  }
-  .grid .mainaboutme .paragraph {
-    font-size: 1.1vw;
-    color: rgba(0, 0, 0, 0.8705882353);
-    margin: 0.3vw 0.3vw 0vw 0.3vw;
-  }
-}
-@media screen and (max-width: 400px) {
-  .grid {
-    /* ABOUT */
-  }
-  .grid .header {
-    /* ABOUT */
-  }
-  .grid .header .lineabout {
-    height: 2px;
-    padding: 0;
-    margin: -22rem 40vh 0 0;
-  }
-  .grid .header .homeabout {
-    display: flex;
-    justify-content: end;
-    margin-top: -0.85rem;
-    margin-right: 10%;
-  }
-  .grid .header .navbarabout {
-    margin: 2rem;
-    /*SKILLS*/
-  }
-  .grid .header .navbarabout .skills-list {
-    margin-top: 1vw;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 1vw;
-    -moz-column-gap: 1vw;
-         column-gap: 1vw;
-    row-gap: 1.5vw;
-    list-style: none;
-    padding-right: 2rem;
-    padding-left: 2rem;
-  }
-  .grid .header .navbarabout .skills-list .skill {
-    background-color: #f3f5e2;
-    padding: 0.5vw 0.75vw;
-    border-radius: 0.25vw;
-    border: 1px solid #444444;
-    transition: 0.2s;
-    font-size: 4.2vh;
-  }
-  .grid .header .navbarabout .skills-list .skills-titles {
-    font-size: 9vh;
-  }
-  .grid .header .navbarabout .skills-list .mainaboutme .skills-list {
-    margin-top: 0vw;
-  }
-}
-@media screen and (max-width: 400px) and (hover: hover) {
-  .grid .header .navbarabout .skills-list .skill:hover {
-    border-color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.8705882353);
-    color: #ffffff;
-  }
-}
-@media screen and (max-width: 400px) {
-  .grid .mainaboutme {
-    display: grid;
-    grid-area: main1;
-    padding-top: 20%;
-    max-width: 100%;
-    margin-top: 10rem;
-    padding-top: 0rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    justify-content: center;
-    text-align: center;
-  }
-  .grid .mainaboutme .titleaboutme {
-    font-size: 13vh;
-  }
-  .grid .mainaboutme .subtitle {
-    font-size: 6vh;
-  }
-  .grid .mainaboutme .paragraph {
-    font-size: 1.1vw;
-    color: rgba(0, 0, 0, 0.8705882353);
-    margin: 0.3vw 0.3vw 0vw 0.3vw;
-  }
 }/*# sourceMappingURL=styles.css.map */

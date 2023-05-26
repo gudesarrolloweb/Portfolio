@@ -1,109 +1,132 @@
 .grid {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  grid-template-areas: "footer1  mainindex";
+
+  .mainindex {
     display: grid;
-    grid-template-columns: 10% 30% 60%;
-    grid-template-areas: "footer1 main1 header1";
-    .header {
-        display: grid;
-        grid-area: header1;
-        .navbar {
-            display: flex;
-            margin-top: 5%;
-            padding: 2vw;
-            .navbar-item {
-                list-style: none;
-                .navbar-link {
-                    text-decoration: none;
-                    color: $black;
-                    font-size: 10vw;
-                }
-            }
-        }
-    }
-    .main {
-        display: grid;
-        grid-area: main1;
-        margin-top: 75%;
-        padding: 1.5vw;
-        h1 {
-            font-size:calc(12px + 4vh);
-            margin-top: 5vw;
-        }
-        .title {
-            color: $black;
-        }
-        .subtitle {
-            font-size:calc(12px + 2.5vh);
-            color: $black;
-        }
-        .paragraph {
-            font-size:calc(12px + 1vh);
-            color: $black;
-        }
-    }
-    .footer {
-        grid-area: footer1;
-        z-index: 600;
-        width: 6%;
-        height: 100vh;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding-top: 5%;
-        padding-bottom: 3vw;
-        margin-bottom: 1vw;
+    grid-area: mainindex;
+    grid-template-columns: 40% 60%;
+    grid-template-areas: "mainme  mainlinks";
+  
+  .mainme {
+    display: grid;
+    grid-area: mainme;
+
+    .maintext {
         display: flex;
-        position: fixed;
+        flex-direction: column;
+        justify-content: end;
+        margin-bottom: 2rem;
+        padding-left: 1rem;
+        padding-right: 1.5rem;
+        h1 {
+        font-size: calc(12px + 4vh);
+        margin-top: 5vw;
+      }
+      .title {
+        color: $black;
+      }
+      .subtitle {
+        font-size: calc(12px + 2.5vh);
+        color: $black;
+      }
+      .paragraph {
+        font-size: calc(12px + 1vh);
+        color: $black;
+      }
     }
-    .main-footer {
-        padding-block: 3vw;
-        
-        .main-footer-inner a {
-            font-size: 2.4vw;
-            color: var(--clr-text);
-            transition: .2s;
-        }
-            .main-buttons {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 1vw;
-                margin-left: 0.5rem;
-                .main-footer-inner ion-icon {
-                    pointer-events: none;
-                    display: flex;
-                }
-                .colorbutton {
-                    font-size:calc(12px + 2.5vh);
-                    color: var(--clr-text);
-                    transition: 0.2s;
-                    margin-top:-1.5vw;
-                    margin-bottom: 1vw;
-                }
-                .ig, .github, .linkedin {
-                    font-size:calc(12px + 3vh)
-                }
-            
+
+    
+  }
+
+  .mainlinks {
+    display: grid;
+    grid-area: mainlinks;
+
+    .pageslinks {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        .main2-item {
+            list-style: none;
+            .main2-link {
+              text-decoration: none;
+              color: $black;
+              font-size: 10vw;
             }
-            .main-buttons>button,
-            .main-buttons>a {
-                border: 0;
-                background-color: transparent;
-                display: flex;
-                align-items: center;
-                cursor: pointer;
-            }
-            }
-            @media (hover: hover) {
-                .main-buttons>button:hover,
-                .main-buttons>a:hover {
-                    border: 0;
-                    background-color: transparent;
-                    color: var(--clr-botton);
-                    cursor: pointer;
-                }
-            }
-            .main-buttons ion-icon {
-                pointer-events: none;
-            }
-        }
+          }
+    }
+
+    
+  }
+}
+
+  .footer {
+    grid-area: footer1;
+    z-index: 600;
+    width: 6%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 5%;
+    padding-bottom: 3vw;
+    margin-bottom: 1vw;
+    display: flex;
+    position: fixed;
+  }
+  .main-footer {
+    padding-block: 3vw;
+
+    .main-footer-inner a {
+      font-size: 2.4vw;
+      color: var(--clr-text);
+      transition: 0.2s;
+    }
+    .main-buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1vw;
+      margin-left: 0.5rem;
+      .main-footer-inner ion-icon {
+        pointer-events: none;
+        display: flex;
+      }
+      .colorbutton {
+        font-size: calc(12px + 2.5vh);
+        color: var(--clr-text);
+        transition: 0.2s;
+        margin-top: -1.5vw;
+        margin-bottom: 1vw;
+      }
+      .ig,
+      .github,
+      .linkedin {
+        font-size: calc(12px + 3vh);
+      }
+    }
+    .main-buttons > button,
+    .main-buttons > a {
+      border: 0;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+  @media (hover: hover) {
+    .main-buttons > button:hover,
+    .main-buttons > a:hover {
+      border: 0;
+      background-color: transparent;
+      color: var(--clr-botton);
+      cursor: pointer;
+    }
+  }
+  .main-buttons ion-icon {
+    pointer-events: none;
+  }
+}
