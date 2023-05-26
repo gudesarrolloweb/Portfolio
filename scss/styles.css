@@ -308,6 +308,7 @@
     grid-template-rows: 50% 50%;
     grid-template-areas: "footer1  main1" "footer1  header1";
     /************************************************ ABOUT ****************************************************/
+    /******************************************************** PROYECTOS **************************************************/
   }
   .grid .header {
     display: grid;
@@ -471,7 +472,6 @@
     padding-right: 5rem;
     justify-content: center;
     text-align: center;
-    /******************************************************** PROYECTOS **************************************************/
   }
   .grid .mainaboutme .titleaboutme {
     font-size: 13vh;
@@ -484,7 +484,9 @@
     color: rgba(0, 0, 0, 0.8705882353);
     margin: 0.3vw 0.3vw 0vw 0.3vw;
   }
-  .grid .mainaboutme .header .lineproject {
+}
+@media screen and (max-width: 992px) {
+  .grid .header .lineproject {
     margin: -25rem 10rem 0 0;
   }
 }
@@ -538,5 +540,253 @@
     border-color: #ffffff;
     background-color: rgba(0, 0, 0, 0.8705882353);
     color: #ffffff;
+  }
+}
+@media screen and (max-width: 695px) {
+  .grid .mainaboutme {
+    display: grid;
+    grid-area: main1;
+    padding-top: 20%;
+    max-width: 100%;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    justify-content: center;
+    text-align: center;
+  }
+  .grid .mainaboutme .titleaboutme {
+    font-size: 13vh;
+  }
+  .grid .mainaboutme .subtitle {
+    font-size: 6vh;
+  }
+  .grid .mainaboutme .paragraph {
+    font-size: 1.1vw;
+    color: rgba(0, 0, 0, 0.8705882353);
+    margin: 0.3vw 0.3vw 0vw 0.3vw;
+  }
+}
+@media screen and (max-width: 510px) {
+  .grid .header .lineabout {
+    height: 2px;
+    padding: 0;
+    margin: -75vh 40vh 0 0;
+  }
+  .grid .header .homeabout {
+    display: flex;
+    justify-content: end;
+    margin-top: -0.85rem;
+    margin-right: 10%;
+  }
+  .grid .header .navbarabout {
+    margin: 2rem;
+    /*SKILLS*/
+  }
+  .grid .header .navbarabout .skills-list {
+    margin-top: 1vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1vw;
+    -moz-column-gap: 1vw;
+         column-gap: 1vw;
+    row-gap: 1.5vw;
+    list-style: none;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  .grid .header .navbarabout .skills-list .skill {
+    background-color: #f3f5e2;
+    padding: 0.5vw 0.75vw;
+    border-radius: 0.25vw;
+    border: 1px solid #444444;
+    transition: 0.2s;
+    font-size: 4.2vh;
+  }
+  .grid .header .navbarabout .skills-list .skills-titles {
+    font-size: 9vh;
+  }
+  .grid .header .navbarabout .skills-list .mainaboutme .skills-list {
+    margin-top: 0vw;
+  }
+}
+@media screen and (max-width: 510px) and (hover: hover) {
+  .grid .header .navbarabout .skills-list .skill:hover {
+    border-color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.8705882353);
+    color: #ffffff;
+  }
+}
+@media screen and (max-width: 510px) {
+  .grid .mainaboutme {
+    display: grid;
+    grid-area: main1;
+    padding-top: 20%;
+    max-width: 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    justify-content: center;
+    text-align: center;
+  }
+  .grid .mainaboutme .titleaboutme {
+    font-size: 13vh;
+  }
+  .grid .mainaboutme .subtitle {
+    font-size: 6vh;
+  }
+  .grid .mainaboutme .paragraph {
+    font-size: 1.1vw;
+    color: rgba(0, 0, 0, 0.8705882353);
+    margin: 0.3vw 0.3vw 0vw 0.3vw;
+  }
+}
+@media screen and (max-width: 435px) {
+  .grid .header .lineabout {
+    height: 2px;
+    padding: 0;
+    margin: -85vh 40vh 0 0;
+  }
+  .grid .header .homeabout {
+    display: flex;
+    justify-content: end;
+    margin-top: -0.85rem;
+    margin-right: 10%;
+  }
+  .grid .header .navbarabout {
+    margin: 2rem;
+    /*SKILLS*/
+  }
+  .grid .header .navbarabout .skills-list {
+    margin-top: 1vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1vw;
+    -moz-column-gap: 1vw;
+         column-gap: 1vw;
+    row-gap: 1.5vw;
+    list-style: none;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  .grid .header .navbarabout .skills-list .skill {
+    background-color: #f3f5e2;
+    padding: 0.5vw 0.75vw;
+    border-radius: 0.25vw;
+    border: 1px solid #444444;
+    transition: 0.2s;
+    font-size: 4.2vh;
+  }
+  .grid .header .navbarabout .skills-list .skills-titles {
+    font-size: 9vh;
+  }
+  .grid .header .navbarabout .skills-list .mainaboutme .skills-list {
+    margin-top: 0vw;
+  }
+}
+@media screen and (max-width: 435px) and (hover: hover) {
+  .grid .header .navbarabout .skills-list .skill:hover {
+    border-color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.8705882353);
+    color: #ffffff;
+  }
+}
+@media screen and (max-width: 435px) {
+  .grid .mainaboutme {
+    display: grid;
+    grid-area: main1;
+    padding-top: 20%;
+    max-width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    justify-content: center;
+    text-align: center;
+  }
+  .grid .mainaboutme .titleaboutme {
+    font-size: 13vh;
+  }
+  .grid .mainaboutme .subtitle {
+    font-size: 6vh;
+  }
+  .grid .mainaboutme .paragraph {
+    font-size: 1.1vw;
+    color: rgba(0, 0, 0, 0.8705882353);
+    margin: 0.3vw 0.3vw 0vw 0.3vw;
+  }
+}
+@media screen and (max-width: 400px) {
+  .grid .header .lineabout {
+    height: 2px;
+    padding: 0;
+    margin: -90vh 40vh 0 0;
+  }
+  .grid .header .homeabout {
+    display: flex;
+    justify-content: end;
+    margin-top: -0.85rem;
+    margin-right: 10%;
+  }
+  .grid .header .navbarabout {
+    margin: 2rem;
+    /*SKILLS*/
+  }
+  .grid .header .navbarabout .skills-list {
+    margin-top: 1vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1vw;
+    -moz-column-gap: 1vw;
+         column-gap: 1vw;
+    row-gap: 1.5vw;
+    list-style: none;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  .grid .header .navbarabout .skills-list .skill {
+    background-color: #f3f5e2;
+    padding: 0.5vw 0.75vw;
+    border-radius: 0.25vw;
+    border: 1px solid #444444;
+    transition: 0.2s;
+    font-size: 4.2vh;
+  }
+  .grid .header .navbarabout .skills-list .skills-titles {
+    font-size: 9vh;
+  }
+  .grid .header .navbarabout .skills-list .mainaboutme .skills-list {
+    margin-top: 0vw;
+  }
+}
+@media screen and (max-width: 400px) and (hover: hover) {
+  .grid .header .navbarabout .skills-list .skill:hover {
+    border-color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.8705882353);
+    color: #ffffff;
+  }
+}
+@media screen and (max-width: 400px) {
+  .grid .mainaboutme {
+    display: grid;
+    grid-area: main1;
+    padding-top: 20%;
+    max-width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    justify-content: center;
+    text-align: center;
+  }
+  .grid .mainaboutme .titleaboutme {
+    font-size: 13vh;
+  }
+  .grid .mainaboutme .subtitle {
+    font-size: 6vh;
+  }
+  .grid .mainaboutme .paragraph {
+    font-size: 1.1vw;
+    color: rgba(0, 0, 0, 0.8705882353);
+    margin: 0.3vw 0.3vw 0vw 0.3vw;
   }
 }/*# sourceMappingURL=styles.css.map */
