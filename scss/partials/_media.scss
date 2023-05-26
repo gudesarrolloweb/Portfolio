@@ -98,4 +98,64 @@
     }
   }
   /* WORKS */
+  .worksgrid {
+    .headermainworks {
+      .works {
+        .navworks {
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+          "workstext"
+          "workslinks";
+
+          .workstext {
+            grid-area: workstext;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            margin-top: -5rem;
+            h1 {
+              font-size: calc(12px + 3vh);
+              margin-top: 5vw;
+            }
+            .subtitle {
+              font-size: calc(12px + 1.5vh);
+            }
+            .paragraph {
+              font-size: calc(12px + 1.2vh);
+            }
+          }
+          .workslinks {
+            grid-area: workslinks;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            height: 400px;
+            text-align: center;
+            justify-content: center;
+            margin-top: 4rem;
+            margin-bottom: 2rem;
+            overflow-y: scroll;
+            width: 100%;
+            margin-top: 2rem;
+            .navbar-item {
+              .project-link {
+                .titleproject {
+                  font-size: 4vh;
+                  margin-bottom: -1.2rem;
+                }
+                .paragraphproject {
+                  font-size: 1.5vh;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -155,48 +155,167 @@
   pointer-events: none;
 }
 
-.grid .header .lineproject {
+.worksgrid {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  grid-template-areas: "works-footer  headermainworks";
+}
+.worksgrid .headermainworks {
+  display: grid;
+  grid-area: headermainworks;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 80%;
+  grid-template-areas: "gohome" "works";
+}
+.worksgrid .headermainworks .header .gohome {
+  display: grid;
+  grid-area: gohome;
+}
+.worksgrid .headermainworks .header .gohome .lineabout {
   border-top: 1px solid black;
   height: 2px;
   padding: 0;
-  margin: 3rem 10rem 0 0;
+  margin: 3rem 15rem 0 0;
 }
-.grid .header .homeproject {
+.worksgrid .headermainworks .header .gohome .homeabout {
   display: flex;
   justify-content: end;
   margin-top: -0.8rem;
   margin-right: 10%;
 }
-.grid .header .homeproject a {
+.worksgrid .headermainworks .header .gohome .homeabout a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.8705882353);
 }
-.grid .header .navbarproject::-webkit-scrollbar {
+.worksgrid .headermainworks .works {
+  display: grid;
+  grid-area: works;
+}
+.worksgrid .headermainworks .works .navworks {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-areas: "workstext  workslinks";
+}
+.worksgrid .headermainworks .works .navworks .workslinks::-webkit-scrollbar {
   display: none;
 }
-.grid .header .navbarproject {
+.worksgrid .headermainworks .works .navworks .workstext {
+  grid-area: workstext;
   display: flex;
+  flex-direction: column;
+  justify-content: end;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.worksgrid .headermainworks .works .navworks .workstext h1 {
+  font-size: calc(12px + 4vh);
+  margin-top: 5vw;
+}
+.worksgrid .headermainworks .works .navworks .workstext .title {
+  color: rgba(0, 0, 0, 0.8705882353);
+}
+.worksgrid .headermainworks .works .navworks .workstext .subtitle {
+  font-size: calc(12px + 2.5vh);
+  color: rgba(0, 0, 0, 0.8705882353);
+}
+.worksgrid .headermainworks .works .navworks .workstext .paragraph {
+  font-size: calc(12px + 1.5vh);
+  color: rgba(0, 0, 0, 0.8705882353);
+}
+.worksgrid .headermainworks .works .navworks .workslinks {
+  grid-area: workslinks;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  height: 400px;
   text-align: center;
   justify-content: center;
-  margin-bottom: -5rem;
-  margin-right: 10%;
-  height: 450px;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
   overflow-y: scroll;
+  width: 100%;
 }
-.grid .header .navbarproject .navbar-item {
+.worksgrid .headermainworks .works .navworks .workslinks .navbar-item {
   list-style: none;
 }
-.grid .header .navbarproject .navbar-item .project-link {
+.worksgrid .headermainworks .works .navworks .workslinks .navbar-item .project-link {
   text-decoration: none;
 }
-.grid .header .navbarproject .navbar-item .project-link .titleproject {
+.worksgrid .headermainworks .works .navworks .workslinks .navbar-item .project-link .titleproject {
   font-size: 4rem;
   color: rgba(0, 0, 0, 0.8705882353);
   margin-bottom: -1.2rem;
 }
-.grid .header .navbarproject .navbar-item .project-link .paragraphproject {
+.worksgrid .headermainworks .works .navworks .workslinks .navbar-item .project-link .paragraphproject {
   font-size: 1.5rem;
   color: rgba(0, 0, 0, 0.8705882353);
+}
+.worksgrid .footer {
+  z-index: 600;
+  width: 6%;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 5%;
+  padding-bottom: 3vw;
+  margin-bottom: 1vw;
+  display: flex;
+  position: fixed;
+}
+.worksgrid .works-footer {
+  grid-area: about-footer;
+  padding-block: 3vw;
+}
+.worksgrid .works-footer .works-footer-inner a {
+  font-size: 2.4vw;
+  color: var(--clr-text);
+  transition: 0.2s;
+}
+.worksgrid .works-footer .works-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  margin-left: 0.5rem;
+}
+.worksgrid .works-footer .works-buttons .works-footer-inner ion-icon {
+  pointer-events: none;
+  display: flex;
+}
+.worksgrid .works-footer .works-buttons .colorbutton {
+  font-size: calc(12px + 2.5vh);
+  color: var(--clr-text);
+  transition: 0.2s;
+  margin-top: -1.5vw;
+  margin-bottom: 1vw;
+}
+.worksgrid .works-footer .works-buttons .ig,
+.worksgrid .works-footer .works-buttons .github,
+.worksgrid .works-footer .works-buttons .linkedin {
+  font-size: calc(12px + 3vh);
+}
+.worksgrid .works-footer .works-buttons > button,
+.worksgrid .works-footer .works-buttons > a {
+  border: 0;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+@media (hover: hover) {
+  .worksgrid .works-buttons > button:hover,
+  .worksgrid .works-buttons > a:hover {
+    border: 0;
+    background-color: transparent;
+    color: var(--clr-botton);
+    cursor: pointer;
+  }
+}
+.worksgrid .works-buttons ion-icon {
+  pointer-events: none;
 }
 
 .aboutgrid {
@@ -491,4 +610,51 @@
     font-size: calc(12px + 1.5vw);
   }
   /* WORKS */
+  .worksgrid .headermainworks .works .navworks {
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "workstext" "workslinks";
+  }
+  .worksgrid .headermainworks .works .navworks .workstext {
+    grid-area: workstext;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-top: -5rem;
+  }
+  .worksgrid .headermainworks .works .navworks .workstext h1 {
+    font-size: calc(12px + 3vh);
+    margin-top: 5vw;
+  }
+  .worksgrid .headermainworks .works .navworks .workstext .subtitle {
+    font-size: calc(12px + 1.5vh);
+  }
+  .worksgrid .headermainworks .works .navworks .workstext .paragraph {
+    font-size: calc(12px + 1.2vh);
+  }
+  .worksgrid .headermainworks .works .navworks .workslinks {
+    grid-area: workslinks;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    height: 400px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    overflow-y: scroll;
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .worksgrid .headermainworks .works .navworks .workslinks .navbar-item .project-link .titleproject {
+    font-size: 4vh;
+    margin-bottom: -1.2rem;
+  }
+  .worksgrid .headermainworks .works .navworks .workslinks .navbar-item .project-link .paragraphproject {
+    font-size: 1.5vh;
+  }
 }/*# sourceMappingURL=styles.css.map */

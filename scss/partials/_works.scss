@@ -1,0 +1,173 @@
+.worksgrid {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  grid-template-areas: "works-footer  headermainworks";
+
+  .headermainworks {
+    display: grid;
+    grid-area: headermainworks;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas:
+      "gohome"
+      "works";
+    .header {
+      .gohome {
+        display: grid;
+        grid-area: gohome;
+        .lineabout {
+          border-top: 1px solid black;
+          height: 2px;
+          padding: 0;
+          margin: 3rem 15rem 0 0;
+        }
+
+        .homeabout {
+          display: flex;
+          justify-content: end;
+          margin-top: -0.8rem;
+          margin-right: 10%;
+        }
+
+        .homeabout a {
+          text-decoration: none;
+          color: $black;
+        }
+      }
+    }
+    .works {
+      display: grid;
+      grid-area: works;
+
+      .navworks {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-areas: "workstext  workslinks";
+
+        .workslinks::-webkit-scrollbar {
+          display: none;
+        }
+        .workstext {
+          grid-area: workstext;
+          display: flex;
+          flex-direction: column;
+          justify-content: end;
+          margin-bottom: 2rem;
+          padding-left: 2rem;
+          padding-right: 2rem;
+          h1 {
+            font-size: calc(12px + 4vh);
+            margin-top: 5vw;
+          }
+          .title {
+            color: $black;
+          }
+          .subtitle {
+            font-size: calc(12px + 2.5vh);
+            color: $black;
+          }
+          .paragraph {
+            font-size: calc(12px + 1.5vh);
+            color: $black;
+          }
+        }
+        .workslinks {
+          grid-area: workslinks;
+          display: flex;
+          flex-direction: column;
+          padding: 2rem;
+          height: 400px;
+          text-align: center;
+          justify-content: center;
+          margin-top: 4rem;
+          margin-bottom: 2rem;
+          overflow-y: scroll;
+          width: 100%;
+          .navbar-item {
+            list-style: none;
+
+            .project-link {
+              text-decoration: none;
+
+              .titleproject {
+                font-size: 4rem;
+                color: $black;
+                margin-bottom: -1.2rem;
+              }
+              .paragraphproject {
+                font-size: 1.5rem;
+                color: $black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    z-index: 600;
+    width: 6%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 5%;
+    padding-bottom: 3vw;
+    margin-bottom: 1vw;
+    display: flex;
+    position: fixed;
+  }
+  .works-footer {
+    grid-area: about-footer;
+    padding-block: 3vw;
+    .works-footer-inner a {
+      font-size: 2.4vw;
+      color: var(--clr-text);
+      transition: 0.2s;
+    }
+    .works-buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1vw;
+      margin-left: 0.5rem;
+      .works-footer-inner ion-icon {
+        pointer-events: none;
+        display: flex;
+      }
+      .colorbutton {
+        font-size: calc(12px + 2.5vh);
+        color: var(--clr-text);
+        transition: 0.2s;
+        margin-top: -1.5vw;
+        margin-bottom: 1vw;
+      }
+      .ig,
+      .github,
+      .linkedin {
+        font-size: calc(12px + 3vh);
+      }
+    }
+    .works-buttons > button,
+    .works-buttons > a {
+      border: 0;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+  @media (hover: hover) {
+    .works-buttons > button:hover,
+    .works-buttons > a:hover {
+      border: 0;
+      background-color: transparent;
+      color: var(--clr-botton);
+      cursor: pointer;
+    }
+  }
+  .works-buttons ion-icon {
+    pointer-events: none;
+  }
+}
