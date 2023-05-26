@@ -164,7 +164,7 @@
   display: grid;
   grid-area: headermainworks;
   grid-template-columns: 100%;
-  grid-template-rows: 20% 80%;
+  grid-template-rows: 10% 90%;
   grid-template-areas: "gohome" "works";
 }
 .worksgrid .headermainworks .header .gohome {
@@ -327,7 +327,7 @@
   display: grid;
   grid-area: headermainabout;
   grid-template-columns: 100%;
-  grid-template-rows: 20% 80%;
+  grid-template-rows: 10% 90%;
   grid-template-areas: "gohome" "aboutme";
 }
 .aboutgrid .headermainabout .gohome {
@@ -496,7 +496,7 @@
   display: grid;
   grid-area: headermainabout;
   grid-template-columns: 100%;
-  grid-template-rows: 20% 80%;
+  grid-template-rows: 10% 90%;
   grid-template-areas: "gohome" "contactme";
 }
 .contactgrid .headermaincontact .gohome {
