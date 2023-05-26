@@ -2,18 +2,15 @@
   display: grid;
   grid-template-columns: 10% 90%;
   grid-template-areas: "footer1  mainindex";
-
   .mainindex {
     display: grid;
     grid-area: mainindex;
     grid-template-columns: 40% 60%;
     grid-template-areas: "mainme  mainlinks";
-  
-  .mainme {
-    display: grid;
-    grid-area: mainme;
-
-    .maintext {
+    .mainme {
+      display: grid;
+      grid-area: mainme;
+      .maintext {
         display: flex;
         flex-direction: column;
         justify-content: end;
@@ -21,47 +18,40 @@
         padding-left: 1rem;
         padding-right: 1.5rem;
         h1 {
-        font-size: calc(12px + 4vh);
-        margin-top: 5vw;
-      }
-      .title {
-        color: $black;
-      }
-      .subtitle {
-        font-size: calc(12px + 2.5vh);
-        color: $black;
-      }
-      .paragraph {
-        font-size: calc(12px + 1vh);
-        color: $black;
+          font-size: calc(12px + 4vh);
+          margin-top: 5vw;
+        }
+        .title {
+          color: $black;
+        }
+        .subtitle {
+          font-size: calc(12px + 2.5vh);
+          color: $black;
+        }
+        .paragraph {
+          font-size: calc(12px + 1vh);
+          color: $black;
+        }
       }
     }
-
-    
-  }
-
-  .mainlinks {
-    display: grid;
-    grid-area: mainlinks;
-
-    .pageslinks {
+    .mainlinks {
+      display: grid;
+      grid-area: mainlinks;
+      .pageslinks {
         display: flex;
         flex-direction: column;
         margin-top: 2rem;
         .main2-item {
-            list-style: none;
-            .main2-link {
-              text-decoration: none;
-              color: $black;
-              font-size: 10vw;
-            }
+          list-style: none;
+          .main2-link {
+            text-decoration: none;
+            color: $black;
+            font-size: 10vw;
           }
+        }
+      }
     }
-
-    
   }
-}
-
   .footer {
     grid-area: footer1;
     z-index: 600;
