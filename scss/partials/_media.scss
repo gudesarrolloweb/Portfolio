@@ -29,7 +29,13 @@
           }
         }
       }
+      /* CONTACT */
+    .linecontact {
+      margin: -6rem 10rem 0 0;
     }
+    }
+    
+    /* INDEX */
     .main {
       display: grid;
       grid-area: main1;
@@ -52,10 +58,11 @@
         font-size: calc(12px + 1.5vw);
       }
     }
+    /* CONTACT */
     .maincontact {
       display: grid;
       grid-area: main1;
-      margin-top: 7%;
+      margin-top: 15%;
       max-width: 40rem;
       margin-bottom: 2rem;
       margin-right: auto;
@@ -172,6 +179,7 @@
   }
   
   }
+  /* ABOUT */
   .mainaboutme {
     display: grid;
     grid-area: main1;
@@ -197,13 +205,13 @@
       margin: 0.3vw 0.3vw 0vw 0.3vw;
     }
   }
-  /******************************************************** PROYECTOS **************************************************/
+  /******************************************************** PROJECT **************************************************/
   .header {
     .lineproject {
       margin: -25rem 10rem 0 0;
     }
   }
-  }  
+  }
 }
 
 
@@ -215,6 +223,15 @@
 @media screen and (max-width: 695px) {
 .grid {
   .header {
+    /* CONTACT */
+    .linecontact {
+      margin: -3rem 10rem 0 0;
+    }
+    /* PROJECT */
+    .lineproject {
+      margin: -23rem 10rem 0 0;
+    }
+    /* ABOUT */
     .lineabout {
       height: 2px;
       padding: 0;
@@ -267,6 +284,7 @@
   }
 }
 }
+/* ABOUT */
 .mainaboutme {
   display: grid;
   grid-area: main1;
@@ -304,6 +322,24 @@
 @media screen and (max-width: 510px) {
   .grid {
     .header {
+      /*PROJECT*/
+      .lineproject {
+        margin: -21rem 10rem 0 0;
+      }
+      .navbarproject {
+        .navbar-item {
+          .project-link {
+            .titleproject {
+              font-size: 3.2rem;
+              margin-bottom: -1.2rem;
+            }
+            .paragraphproject {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+      /* ABOUT */
       .lineabout {
         height: 2px;
         padding: 0;
@@ -356,6 +392,7 @@
     }
   }
   }
+  /* ABOUT */
   .mainaboutme {
     display: grid;
     grid-area: main1;
@@ -393,6 +430,7 @@
   @media screen and (max-width: 435px) {
     .grid {
       .header {
+        /* ABOUT */
         .lineabout {
           height: 2px;
           padding: 0;
@@ -445,6 +483,7 @@
       }
     }
     }
+    /* ABOUT */
     .mainaboutme {
       display: grid;
       grid-area: main1;
@@ -485,6 +524,7 @@
     @media screen and (max-width: 400px) {
       .grid {
         .header {
+          /* ABOUT */
           .lineabout {
             height: 2px;
             padding: 0;
@@ -537,6 +577,7 @@
         }
       }
       }
+      /* ABOUT */
       .mainaboutme {
         display: grid;
         grid-area: main1;
