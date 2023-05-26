@@ -336,7 +336,7 @@
     font-size: calc(12px + 13vw);
   }
   .grid .header .linecontact {
-    margin: -6rem 10rem 0 0;
+    margin: -9rem 10rem 0 0;
   }
   .grid .main {
     display: grid;
@@ -369,9 +369,13 @@
     margin-left: auto;
     text-align: center;
   }
+  .grid .maincontact .titlecontact {
+    font-size: 28vh;
+  }
   .grid .maincontact .subtitlecontact {
     padding-right: 2rem;
     padding-left: 2rem;
+    font-size: 5.37vh;
   }
   .grid .footer {
     grid-area: footer1;
@@ -503,13 +507,16 @@
   .grid {
     /* ABOUT */
   }
+  .grid .maincontact {
+    margin-top: 35%;
+  }
   .grid .header {
     /* CONTACT */
     /* PROJECT */
     /* ABOUT */
   }
   .grid .header .linecontact {
-    margin: -3rem 10rem 0 0;
+    margin: -10rem 10rem 0 0;
   }
   .grid .header .lineproject {
     margin: -23rem 10rem 0 0;

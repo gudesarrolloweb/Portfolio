@@ -31,7 +31,7 @@
       }
       /* CONTACT */
     .linecontact {
-      margin: -6rem 10rem 0 0;
+      margin: -9rem 10rem 0 0;
     }
     }
     
@@ -68,11 +68,14 @@
       margin-right: auto;
       margin-left: auto;
       text-align: center;
-
-      .subtitlecontact {
-        padding-right: 2rem;
+      .titlecontact {
+        font-size: 28vh;
+    }
+    .subtitlecontact {
+      padding-right: 2rem;
         padding-left: 2rem;
-      }
+        font-size: 5.37vh;
+    }
     }
 
     .footer {
@@ -222,10 +225,13 @@
 
 @media screen and (max-width: 695px) {
 .grid {
+  .maincontact {
+    margin-top: 35%;
+  }
   .header {
     /* CONTACT */
     .linecontact {
-      margin: -3rem 10rem 0 0;
+      margin: -10rem 10rem 0 0;
     }
     /* PROJECT */
     .lineproject {
