@@ -484,4 +484,11 @@
   .aboutgrid .headermainabout .aboutme .aboutmetext .subtitle {
     font-size: calc(12px + 1.5vw);
   }
+  .aboutgrid .headermainabout .aboutme .aboutlinks .skills-titles {
+    font-size: calc(12px + 3vw);
+  }
+  .aboutgrid .headermainabout .aboutme .aboutlinks .skills-list .skill {
+    font-size: calc(12px + 1.5vw);
+  }
+  /* WORKS */
 }/*# sourceMappingURL=styles.css.map */

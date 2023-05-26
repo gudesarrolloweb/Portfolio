@@ -68,23 +68,34 @@
         grid-template-areas:
           "aboutmetext"
           "aboutlinks";
-          .aboutmetext {
-            grid-area: aboutmetext;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            margin-bottom: 2rem;
-            padding-left: 2rem;
-            padding-right: 2rem;
-            h1 {
-                font-size: calc(12px + 3vw);
-              }
-              .subtitle {
-                font-size: calc(12px + 1.5vw);
-              }
+        .aboutmetext {
+          grid-area: aboutmetext;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          margin-bottom: 2rem;
+          padding-left: 2rem;
+          padding-right: 2rem;
+          h1 {
+            font-size: calc(12px + 3vw);
           }
+          .subtitle {
+            font-size: calc(12px + 1.5vw);
+          }
+        }
+        .aboutlinks {
+          .skills-titles {
+            font-size: calc(12px + 3vw);
+          }
+          .skills-list {
+            .skill {
+              font-size: calc(12px + 1.5vw);
+            }
+          }
+        }
       }
     }
   }
+  /* WORKS */
 }
