@@ -1,47 +1,110 @@
-.grid {
-    .header {
-        .linecontact {
-          border-top: 1px solid black;
-          height: 2px;
-          padding: 0;
-          margin: 3rem 10rem 0 0;
-        }
-    
-        .homecontact {
-          display: flex;
-          justify-content: end;
-          margin-top: -0.8rem;
-          margin-right: 10%;
-        }
-    
-        .homecontact a {
-          text-decoration: none;
+.contactgrid {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  grid-template-areas: "about-footer  headermainabout";
+
+  .headermaincontact {
+    display: grid;
+    grid-area: headermainabout;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas:
+      "gohome"
+      "contactme";
+    .gohome {
+      display: grid;
+      grid-area: gohome;
+    }
+    .contactme {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      h1 {
+        font-size: calc(12px + 12vw);
+        margin-top: 5vw;
+      }
+      .title {
+        color: $black;
+      }
+      .subtitle {
+        font-size: calc(12px + 1vw);
+        color: $black;
+        margin-top: 0.5rem;
+        .email {
           color: $black;
         }
+      }
     }
-    .maincontact {
-        display: grid;
-        grid-area: main1;
-        margin-top: 32%;
-        max-width: 40vw;
-        margin-bottom: 2vw;
-        margin-right: auto;
-        margin-left: auto;
-        text-align: center;
-
-        .titlecontact {
-            color: $black;
-            margin: 0.3vw;
-            font-size: 8vw;
-        }
-
-        .subtitlecontact {
-            font-size: 1.37vw;
-            color: $black;
-            margin: 0.8vw;
-            .email {
-                color: black;
-            }
-        }
+  }
+  .footer {
+    z-index: 600;
+    width: 6%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 5%;
+    padding-bottom: 3vw;
+    margin-bottom: 1vw;
+    display: flex;
+    position: fixed;
+  }
+  .contact-footer {
+    grid-area: about-footer;
+    padding-block: 3vw;
+    .contact-footer-inner a {
+      font-size: 2.4vw;
+      color: var(--clr-text);
+      transition: 0.2s;
     }
+    .contact-buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1vw;
+      margin-left: 0.5rem;
+      .contact-footer-inner ion-icon {
+        pointer-events: none;
+        display: flex;
+      }
+      .colorbutton {
+        font-size: calc(12px + 2.5vh);
+        color: var(--clr-text);
+        transition: 0.2s;
+        margin-top: -1.5vw;
+        margin-bottom: 1vw;
+      }
+      .ig,
+      .github,
+      .linkedin {
+        font-size: calc(12px + 3vh);
+      }
+    }
+    .contact-buttons > button,
+    .contact-buttons > a {
+      border: 0;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+  @media (hover: hover) {
+    .contact-buttons > button:hover,
+    .contact-buttons > a:hover {
+      border: 0;
+      background-color: transparent;
+      color: var(--clr-botton);
+      cursor: pointer;
+    }
+  }
+  .contact-buttons ion-icon {
+    pointer-events: none;
+  }
 }
