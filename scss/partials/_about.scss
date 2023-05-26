@@ -1,4 +1,24 @@
 .grid {
+    .header {
+        .lineabout {
+          border-top: 1px solid black;
+          height: 2px;
+          padding: 0;
+          margin: 3rem 10rem 0 0;
+        }
+    
+        .homeabout {
+          display: flex;
+          justify-content: end;
+          margin-top: -0.8rem;
+          margin-right: 10%;
+        }
+    
+        .homeabout a {
+          text-decoration: none;
+          color: $black;
+        }
+    }
     .navbarabout{
         margin:2rem;
         /*SKILLS*/

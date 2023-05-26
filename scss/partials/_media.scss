@@ -1,5 +1,6 @@
 @media screen and (max-width: 992px) {
   .grid {
+    /******************************************* INDEX *************************************************/
     display: grid;
     grid-template-columns: 10% 90%;
     grid-template-rows: 50% 50%;
@@ -9,7 +10,7 @@
     .header {
       display: grid;
       grid-area: header1;
-      .gohome{
+      .gohome {
         margin-top: -25rem;
       }
       .navbar {
@@ -80,9 +81,6 @@
       display: flex;
       position: fixed;
     }
-
-    /* FOOTER */
-
     .main-footer {
       padding-block: 3rem;
 
@@ -119,6 +117,155 @@
         align-items: center;
         cursor: pointer;
       }
+    }/************************************************ ABOUT ****************************************************/
+    .header {
+      .lineabout {
+        height: 2px;
+        padding: 0;
+        margin: -50vh 40vh 0 0;
+      }
+      .homeabout {
+        display: flex;
+        justify-content: end;
+        margin-top: -0.85rem;
+        margin-right: 10%;
+      }
+    .navbarabout {
+    margin: 2rem;
+    /*SKILLS*/
+    .skills-list {
+      margin-top: 1vw;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1vw;
+      column-gap: 1vw;
+      row-gap: 0.5vw;
+      list-style: none;
+      padding-right: 2rem;
+      padding-left: 2rem;
+
+      .skill {
+        background-color: $gray;
+        padding: 0.5vw 0.75vw;
+        border-radius: 0.25vw;
+        border: 1px solid $lightblack;
+        transition: 0.2s;
+        font-size: 4.2vh;
+      }
+      .skills-titles {
+        font-size: 11vh;
+      }
+      .mainaboutme .skills-list {
+        margin-top: 2vw;
+      }
+
+      @media (hover: hover) {
+        .skill:hover {
+          border-color: $white;
+          background-color: $black;
+          color: $white;
+        }
+      }
     }
   }
+  
+  }
+  .mainaboutme {
+    display: grid;
+    grid-area: main1;
+    padding-top: 20%;
+    max-width: 100%;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    justify-content: center;
+    text-align: center;
+    .titleaboutme {
+      font-size: 13vh;
+    }
+
+    .subtitle {
+      font-size: 6vh;
+    }
+
+    .paragraph {
+      font-size: 1.1vw;
+      color: $black;
+      margin: 0.3vw 0.3vw 0vw 0.3vw;
+    }
+  
+  /******************************************************** PROYECTOS **************************************************/
+  .header {
+    .lineproject {
+      margin: -25rem 10rem 0 0;
+    }
+  }
+  }  
+}
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 695px) {
+.grid {
+  .header {
+    .lineabout {
+      height: 2px;
+      padding: 0;
+      margin: -65vh 40vh 0 0;
+    }
+    .homeabout {
+      display: flex;
+      justify-content: end;
+      margin-top: -0.85rem;
+      margin-right: 10%;
+    }
+  .navbarabout {
+  margin: 2rem;
+  /*SKILLS*/
+  .skills-list {
+    margin-top: 1vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1vw;
+    column-gap: 1vw;
+    row-gap: 1.5vw;
+    list-style: none;
+    padding-right: 2rem;
+    padding-left: 2rem;
+
+    .skill {
+      background-color: $gray;
+      padding: 0.5vw 0.75vw;
+      border-radius: 0.25vw;
+      border: 1px solid $lightblack;
+      transition: 0.2s;
+      font-size: 4.2vh;
+    }
+    .skills-titles {
+      font-size: 9vh;
+    }
+    .mainaboutme .skills-list {
+      margin-top: 0vw;
+    }
+
+    @media (hover: hover) {
+      .skill:hover {
+        border-color: $white;
+        background-color: $black;
+        color: $white;
+      }
+    }
+  }
+}
+
+}
+}
 }

@@ -1,20 +1,20 @@
 .grid {
   .header {
-    .line {
+    .lineproject {
       border-top: 1px solid black;
       height: 2px;
       padding: 0;
       margin: 3rem 10rem 0 0;
     }
 
-    .home {
+    .homeproject {
       display: flex;
       justify-content: end;
       margin-top: -0.8rem;
       margin-right: 10%;
     }
 
-    .home a {
+    .homeproject a {
       text-decoration: none;
       color: $black;
     }
