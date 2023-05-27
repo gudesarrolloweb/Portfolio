@@ -382,7 +382,7 @@
   gap: 1vw;
   -moz-column-gap: 1vw;
        column-gap: 1vw;
-  row-gap: 0.5vw;
+  row-gap: 1vw;
   list-style: none;
 }
 .aboutgrid .headermainabout .aboutme .aboutlinks .skills-list .skill {
@@ -640,12 +640,12 @@
   .maingrid .mainindex .mainlinks .pageslinks {
     display: flex;
     flex-direction: column;
-    margin-top: 2rem;
+    margin-top: 0rem;
     justify-content: center;
     text-align: center;
   }
   .maingrid .mainindex .mainlinks .pageslinks .main2-item .main2-link {
-    font-size: 12vw;
+    font-size: 14vw;
   }
   /* ABOUT*/
   .aboutgrid .headermainabout .aboutme {
@@ -720,7 +720,7 @@
     margin-bottom: 2rem;
     overflow-y: scroll;
     width: 100%;
-    margin-top: -5rem;
+    margin-top: -2rem;
   }
   .worksgrid .headermainworks .works .navworks .workslinks .navbar-item .project-link .titleproject {
     font-size: 4vh;
@@ -728,5 +728,16 @@
   }
   .worksgrid .headermainworks .works .navworks .workslinks .navbar-item .project-link .paragraphproject {
     font-size: 2.5vh;
+  }
+  /* CONTACT */
+  .contactgrid .headermaincontact .contactme {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }/*# sourceMappingURL=styles.css.map */

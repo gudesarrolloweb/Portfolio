@@ -45,12 +45,12 @@
         .pageslinks {
           display: flex;
           flex-direction: column;
-          margin-top: 2rem;
+          margin-top: 0rem;
           justify-content: center;
           text-align: center;
           .main2-item {
             .main2-link {
-              font-size: 12vw;
+              font-size: 14vw;
             }
           }
         }
@@ -143,7 +143,7 @@
             margin-bottom: 2rem;
             overflow-y: scroll;
             width: 100%;
-            margin-top: -5rem;
+            margin-top: -2rem;
             .navbar-item {
               .project-link {
                 .titleproject {
@@ -157,6 +157,21 @@
             }
           }
         }
+      }
+    }
+  }
+  /* CONTACT */
+  .contactgrid {
+    .headermaincontact {
+      .contactme {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
       }
     }
   }
