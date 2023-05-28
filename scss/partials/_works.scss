@@ -75,14 +75,12 @@
           grid-area: workslinks;
           display: flex;
           flex-direction: column;
-          padding: 2rem;
-          height: 400px;
           text-align: center;
           justify-content: center;
-          margin-top: 4rem;
-          margin-bottom: 2rem;
+          height: 500px;
+          margin-top: 2rem;
+          padding-top: 28rem;
           overflow-y: scroll;
-          width: 100%;
           .navbar-item {
             list-style: none;
 

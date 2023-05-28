@@ -104,11 +104,11 @@
     .headermainworks {
       .works {
         .navworks {
-        grid-template-columns: 100%;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas:
-          "workstext"
-          "workslinks";
+          grid-template-columns: 100%;
+          grid-template-rows: 1fr 1fr;
+          grid-template-areas:
+            "workstext"
+            "workslinks";
 
           .workstext {
             grid-area: workstext;
@@ -135,15 +135,13 @@
             grid-area: workslinks;
             display: flex;
             flex-direction: column;
-            padding: 2rem;
             height: 400px;
             text-align: center;
             justify-content: center;
-            margin-top: 4rem;
             margin-bottom: 2rem;
             overflow-y: scroll;
-            width: 100%;
             margin-top: -2rem;
+            padding-top: 20rem;
             .navbar-item {
               .project-link {
                 .titleproject {
@@ -172,6 +170,22 @@
         margin-bottom: 1rem;
         padding-left: 2rem;
         padding-right: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 592px) {
+  .worksgrid {
+    .headermainworks {
+      .works {
+        .navworks {
+          .workslinks {
+            grid-area: workslinks;
+            margin-top: -2rem;
+            padding-top:  18rem;
+          }
+        }
       }
     }
   }

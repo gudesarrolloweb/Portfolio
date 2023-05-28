@@ -227,14 +227,12 @@
   grid-area: workslinks;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
-  height: 400px;
   text-align: center;
   justify-content: center;
-  margin-top: 4rem;
-  margin-bottom: 2rem;
+  height: 500px;
+  margin-top: 2rem;
+  padding-top: 28rem;
   overflow-y: scroll;
-  width: 100%;
 }
 .worksgrid .headermainworks .works .navworks .workslinks .navbar-item {
   list-style: none;
@@ -712,15 +710,13 @@
     grid-area: workslinks;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
     height: 400px;
     text-align: center;
     justify-content: center;
-    margin-top: 4rem;
     margin-bottom: 2rem;
     overflow-y: scroll;
-    width: 100%;
     margin-top: -2rem;
+    padding-top: 20rem;
   }
   .worksgrid .headermainworks .works .navworks .workslinks .navbar-item .project-link .titleproject {
     font-size: 4vh;
@@ -739,5 +735,12 @@
     margin-bottom: 1rem;
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+}
+@media screen and (max-width: 592px) {
+  .worksgrid .headermainworks .works .navworks .workslinks {
+    grid-area: workslinks;
+    margin-top: -2rem;
+    padding-top: 18rem;
   }
 }/*# sourceMappingURL=styles.css.map */
